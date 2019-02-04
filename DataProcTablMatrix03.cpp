@@ -1,18 +1,18 @@
 ﻿#include <iostream>
 
-// äîäàòêîâà á³áë³îòåêà 
+// додаткова бібліотека
 #include <time.h>
 
 using namespace std;
 
 int main()
 {
-	// ãåíåðàòîð âèïàäêîâèõ ÷èñåë
+	// гениратор випадкових чисел
 	srand((unsigned)time(NULL));
 	setlocale(LC_ALL, ".1251");
 	system("color 1F");
 
-	// ðîçì³ðè ìàòðèöi
+	// розмір матриці
 	int A[100][100];
 	int n, k, i;
 	char z;
@@ -24,7 +24,7 @@ int main()
 	do
 	{
 		system("cls");
-		printf("\n\tÇàïîâíåííÿ ìàòðèöi A[%2i][%2i] öiëèìè äâîçíà÷íèìè ÷èñëàìè. \n\n", n, n);
+		printf("\n\tЗаповнення матриці A[%2i][%2i] цілими двозначними числами. \n\n", n, n);
 
 		for (k = 0; k < n; k++)
 		{
@@ -44,7 +44,7 @@ int main()
 		int neg = 0;
 		long sump = 0;
 		long dobn = 1;
-		cout << "\n\n\tÏåðåäðóêîâêà ìàòðèöi:\n\n";
+		cout << "\n\n\tПередруковка матрицi:\n\n";
 		for (k = 0; k < n; k++)
 		{
 			cout << "\t";
@@ -68,13 +68,13 @@ int main()
 			cout << "\n";
 		}
 
-		printf("\n\n\tÄîäàòíèõ: %i", poz);
-		printf("\n\tÑóìà äîäàòíèõ: %i", sump);
-		printf("\n\tÂiä'ºìíèõ: %i", neg);
-		printf("\n\tÄîáóòîê âiä'ºìíèõ: %i", dobn);
+		printf("\n\n\tДодатних: %i", poz);
+		printf("\n\tСума додатних: %i", sump);
+		printf("\n\tВiд'ємних: %i", neg);
+		printf("\n\tДобуток вiд'ємних: %i", dobn);
 
 
-		cout << "\n\n\tÏðîäîâæèòè (y/n)? ";
+		cout << "\n\n\tПродовжити (y/n)? ";
 		cin >> z;
 	} while (z != 'n');
 
